@@ -21,17 +21,33 @@ function getRandomPhrase() {
   return phrases[randomIndex];
 }
 
+function displayQuestion(phrase) {
+  document.getElementById("questionText").textContent = "Question: " + phrase;
+  document.getElementById("actionText").textContent = "";
+}
+
+function displayAction(phrase) {
+  document.getElementById("questionText").textContent = "";
+  document.getElementById("actionText").textContent = "Action: " + phrase;
+}
+
+function clearPhrases() {
+  document.getElementById("questionText").textContent = "";
+  document.getElementById("actionText").textContent = "";
+}
+
 function poseQuestion() {
   var phrase = getRandomPhrase();
-  console.log("Pose question:", phrase);
+  displayQuestion(phrase);
 }
 
 function requestAction() {
   var phrase = getRandomPhrase();
-  console.log("Request action:", phrase);
+  displayAction(phrase);
 }
 
 function skipProposition() {
+  clearPhrases();
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
