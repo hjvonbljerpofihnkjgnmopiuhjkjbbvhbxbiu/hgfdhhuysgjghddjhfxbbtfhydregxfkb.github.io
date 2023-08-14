@@ -13,12 +13,14 @@
     <button onclick="startGame()">Start Game</button>
   </div>
 
-  <div id="game-frame" style="display: none;">
-    <h2 id="player-turn"></h2>
-    <button onclick="poseQuestion()">Pose Question</button>
-    <button onclick="requestAction()">Request Action</button>
-    <button onclick="skipProposition()">Skip</button>
-  </div>
+<div id="game-frame" style="display: none;">
+  <h2 id="player-turn"></h2>
+  <p id="questionText">Question: </p>
+  <p id="actionText">Action: </p>
+  <button onclick="poseQuestion()">Pose Question</button>
+  <button onclick="requestAction()">Request Action</button>
+  <button onclick="skipProposition()">Skip</button>
+</div>
 
   <script src="script.js"></script>
 </body>
