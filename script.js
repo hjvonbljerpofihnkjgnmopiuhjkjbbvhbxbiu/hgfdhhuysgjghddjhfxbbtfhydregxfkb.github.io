@@ -10,14 +10,25 @@ function startGame() {
   document.getElementById("player-turn").textContent = "Turn: " + player1Name;
 }
 
+function getRandomPhrase() {
+  var phrases = [
+    "What is your favorite color?",
+    "Describe your dream vacation.",
+    "If you could have any superpower, what would it be?"
+    // Add more phrases here
+  ];
+  var randomIndex = Math.floor(Math.random() * phrases.length);
+  return phrases[randomIndex];
+}
+
 function poseQuestion() {
-  // Add your code to pose a question here
-  console.log("Pose question");
+  var phrase = getRandomPhrase();
+  console.log("Pose question:", phrase);
 }
 
 function requestAction() {
-  // Add your code to request an action here
-  console.log("Request action");
+  var phrase = getRandomPhrase();
+  console.log("Request action:", phrase);
 }
 
 function skipProposition() {
