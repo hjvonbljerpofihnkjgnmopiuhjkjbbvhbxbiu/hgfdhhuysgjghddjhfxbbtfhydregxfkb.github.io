@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .frame {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="playerNameFrame">
+  <h2>Entrez les noms des joueurs</h2>
+  <input type="text" id="player1Name" placeholder="Nom du joueur 1"><br>
+  <input type="text" id="player2Name" placeholder="Nom du joueur 2"><br>
+  <button onclick="startGame()">Commencer</button>
+</div>
+
+<div id="choiceFrame" class="frame">
+  <h2 id="currentPlayer"></h2>
+  <p id="choiceText"></p>
+  <button id="choice1" onclick="makeChoice(1)"></button>
+  <button id="choice2" onclick="makeChoice(2)"></button>
+  <button id="passButton" onclick="nextTurn()">Passer</button>
+</div>
+
+<script>
+let currentPlayer = 0;
+let players = [];
+let choices = [];
+
+function startGame() {
+  const player1Name = document.getElementById("player1Name").value;
+  const player2Name = document.getElementById("player2Name").value;
+  
+  if (player1Name.trim() === "" || player2Name.trim() === "") {
+    alert("Veuillez entrer les noms des joueurs.");
+    return;
+  }
+
+  players = [player1Name, player2Name];
+  currentPlayer = 0;
+
+  document.getElementById("playerNameFrame").style.display = "none";
+  document.getElementById("choiceFrame").style.display = "block";
+  nextTurn();
+}
+
+function nextTurn() {
+  currentPlayer = (currentPlayer + 1) % 2;
+  document.getElementById("currentPlayer").textContent = "Tour de " + players[currentPlayer];
+  document.getElementById("choiceText").textContent = "Que choisissez-vous, " + players[currentPlayer] + "?";
+  document.getElementById("choice1").textContent = "Option 1";
+  document.getElementById("choice2").textContent = "Option 2";
+}
+
+function makeChoice(choice) {
+  choices[currentPlayer] = choice;
+  document.getElementById("choice1").textContent = "Option 1" + (choice === 1 ? " (choisi)" : "");
+  document.getElementById("choice2").textContent = "Option 2" + (choice === 2 ? " (choisi)" : "");
+}
+
+</script>
+
+</body>
+</html>
