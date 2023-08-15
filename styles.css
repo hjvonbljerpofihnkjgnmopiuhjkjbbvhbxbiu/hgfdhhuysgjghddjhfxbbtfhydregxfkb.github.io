@@ -2,7 +2,9 @@
 
 body {
   font-family: 'Kavoon', cursive;
+  background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
 }
+
 
 #player-names {
   text-align: center;
