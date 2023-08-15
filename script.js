@@ -14,7 +14,7 @@ function startGame() {
   document.getElementById("player-names").style.display = "none";
   document.getElementById("game-frame").style.display = "block";
   hideButton();
-  document.getElementById("player-turn").textContent = "C'est à: " + player1Name;
+  document.getElementById("player-turn").textContent = "C'est à  " + player1Name;
 }
 // Affiche les deux boutons Pass et skip
 function showButton() {
@@ -34,8 +34,8 @@ function hidebisButton() {
   document.getElementById("ActQueButtons").style.display = "none";
 }
   
-// Question
-function getRandomPhrase() {
+// Action
+function getRandomAction() {
   var phrases = [
 "Détend-toi, ton / ta partenaire doit te faire un massage sensuel (Durée indéterminer)",
 "Ton / ta partenaire peut prendre un bout de papier et peut marquer ce qu'il veut dessus avant de le glisser dans le vêtement de son choix.",
@@ -75,8 +75,8 @@ function getRandomPhrase() {
   var randomIndex = Math.floor(Math.random() * phrases.length);
   return phrases[randomIndex];
 }
-// Action
-function getRandomAction() {
+// Question
+function getRandomPhrase() {
   var phrases = [
 "As-tu déjà dragué ou envisagé d'avoir une relation sexuelle avec un trans sans savoir que s'en était un ?",
 "As-tu déjà fait l'amour dans l'eau ?",
