@@ -90,3 +90,4 @@ document.getElementById("questionText").textContent = "";
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
+
