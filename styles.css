@@ -2,39 +2,45 @@
 
 body {
   font-family: 'Kavoon', cursive;
-  background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
+  background: linear-gradient(#030c20, #121b39, #2d4065);
 }
 
 /* Appliquer les styles responsifs pour les appareils mobiles */
 @media (max-width: 414px) {
   body {
-    font-size: 14px; /* Ajuster la taille de la police */
+    font-size: 16px;
+  }
+
+  #player-names,
+  #game-frame {
+    margin-top: 50px;
   }
 
   /* Ajuster la taille des boutons */
   .btn-hover {
-    width: 80%; /* Ajuster la largeur du bouton */
-    height: 40px; /* Ajuster la hauteur du bouton */
-    font-size: 14px; /* Ajuster la taille de la police du bouton */
-    margin: 10px auto; /* Centrer le bouton */
+    width: 80%;
+    height: auto;
+    font-size: 14px;
+    margin: 10px auto;
   }
 
   /* Ajuster la taille des zones de texte */
   input[type="text"] {
-    width: 80%; /* Ajuster la largeur du champ de texte */
-    font-size: 14px; /* Ajuster la taille de la police du champ de texte */
+    width: 80%;
+    font-size: 14px;
   }
 
-  /* Ajuster la taille des éléments du jeu */
-  #player-names,
-  #game-frame {
-    margin-top: 50px; /* Ajuster la marge supérieure */
-  }
-  
   /* Ajuster la taille des boutons toggle */
   .toggle-button-cover {
-    width: 100%; /* Ajuster la largeur du bouton toggle */
-    margin: 10px auto; /* Centrer le bouton toggle */
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  /* Ajuster la taille des questions et actions */
+  #questionText,
+  #actionText,
+  #randomNumberMessage {
+    font-size: 14px;
   }
 }
 
