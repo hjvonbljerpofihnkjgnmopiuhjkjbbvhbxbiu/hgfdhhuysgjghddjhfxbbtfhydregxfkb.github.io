@@ -2,7 +2,11 @@
 
 body {
   font-family: 'Kavoon', cursive;
- background: linear-gradient(160deg, #030c20, #121b39, #2d4065);}
+  background-color: #030c20; /* Couleur du haut */
+  margin: 0; /* Supprimer la marge par défaut du body */
+}
+
+
 
 
 
@@ -46,14 +50,11 @@ body {
 }
 
 
-#player-names {
-  text-align: center;
-  margin-top: 100px;
-}
-
+#player-names,
 #game-frame {
+  background-color: #121b39; /* Couleur du milieu */
   text-align: center;
-  margin-top: 50px;
+  padding: 20px; /* Ajouter un peu d'espace autour du contenu */
 }
 
 buttonn {
