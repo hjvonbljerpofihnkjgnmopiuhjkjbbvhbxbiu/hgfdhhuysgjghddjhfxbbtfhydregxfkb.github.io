@@ -27,6 +27,17 @@ function hideButton() {
 document.getElementById("passButton").style.display = "none";
 }
 
+// Affiche les deux boutons Question et action
+function showbisButton() {
+  document.getElementById("ActButton").style.display = "block";
+  document.getElementById("QueButton").style.display = "block";
+}
+// Enleve les deux boutons question et action
+function hidebisButton() {
+  document.getElementById("ActButton").style.display = "none";
+document.getElementById("QueButton").style.display = "none";
+}
+  
 // Question
 function getRandomPhrase() {
   var phrases = [
@@ -73,6 +84,7 @@ console.log('Nombre non générer');
 function poseQuestion() {
   var phrase = getRandomPhrase();
  showButton();
+hidebisButton();
   displayQuestion(phrase);
   clearRandomNumber();
 }
@@ -80,6 +92,7 @@ function poseQuestion() {
 function requestAction() {
   var phrase = getRandomAction();
  showButton();
+  hidebisButton();
   displayAction(phrase);
   clearRandomNumber();
 }
@@ -100,6 +113,7 @@ function skipProposition() {
   document.getElementById("actionText").textContent = "";
 document.getElementById("questionText").textContent = "";
  hideButton();
+  showbisButton();
   if (randomOptionEnabled) {
     displayRandomNumber(currentPlayerName);
   }
@@ -112,6 +126,7 @@ function passProposition() {
   document.getElementById("actionText").textContent = "";
 document.getElementById("questionText").textContent = "";
    hideButton();
+    showbisButton();
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
