@@ -1,10 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Kavoon);
 
+/* Appliquer un arrière-plan continu avec les trois couleurs */
 body {
   font-family: 'Kavoon', cursive;
-  background-color: #030c20; /* Couleur du haut */
   margin: 0; /* Supprimer la marge par défaut du body */
+  background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
+  min-height: 100vh; /* Hauteur de la page égale à la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
 }
+
 
 
 
@@ -49,13 +54,14 @@ body {
   }
 }
 
-
 #player-names,
 #game-frame {
-  background-color: #121b39; /* Couleur du milieu */
+  background-color: rgba(0, 0, 0, 0.7); /* Utiliser une couleur semi-transparente */
   text-align: center;
   padding: 20px; /* Ajouter un peu d'espace autour du contenu */
+  flex: 1; /* Remplir l'espace restant */
 }
+
 
 buttonn {
   margin: 10px;
