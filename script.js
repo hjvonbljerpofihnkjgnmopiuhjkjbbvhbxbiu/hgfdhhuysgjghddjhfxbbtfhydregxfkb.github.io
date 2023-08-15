@@ -1,9 +1,10 @@
 var player1Name, player2Name;
 var currentPlayer = 1;
-var randomOptionEnabled = false;
+var randomOptionEnabled = true;
 
 function toggleRandomOption() {
   randomOptionEnabled = !randomOptionEnabled;
+  clearRandomNumber();
 }
 
 function startGame() {
@@ -70,7 +71,9 @@ function clearRandomNumber() {
 
 function skipProposition() {
   var currentPlayerName = currentPlayer === 1 ? player1Name : player2Name;
-  displayRandomNumber(currentPlayerName);
+  if (randomOptionEnabled) {
+    displayRandomNumber(currentPlayerName);
+  }
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
