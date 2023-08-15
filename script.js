@@ -47,18 +47,48 @@ function clearPhrases() {
   document.getElementById("actionText").textContent = "";
 }
 
+var randomOptionEnabled = false;
+
+function toggleRandomOption() {
+  randomOptionEnabled = !randomOptionEnabled;
+}
+
+function getRandomNumber() {
+  if (randomOptionEnabled) {
+    return Math.floor(Math.random() * 4); // Generates a random number between 0 and 3
+  } else {
+    return "";
+  }
+}
+
 function poseQuestion() {
   var phrase = getRandomPhrase();
   displayQuestion(phrase);
+  clearRandomNumber();
 }
 
 function requestAction() {
-  var phrase = getRandomAction();
+  var phrase = getRandomPhrase();
   displayAction(phrase);
+  clearRandomNumber();
+}
+
+function displayRandomNumber(playerName) {
+  var randomNumber = getRandomNumber();
+  var message = playerName + " doit prendre " + randomNumber;
+  document.getElementById("actionText").textContent = message;
+  document.getElementById("questionText").textContent = message;
+}
+
+function clearRandomNumber() {
+  document.getElementById("actionText").textContent = "";
+  document.getElementById("questionText").textContent = "";
 }
 
 function skipProposition() {
-  clearPhrases();
+  var currentPlayerName = currentPlayer === 1 ? player1Name : player2Name;
+  displayRandomNumber(currentPlayerName);
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
+
