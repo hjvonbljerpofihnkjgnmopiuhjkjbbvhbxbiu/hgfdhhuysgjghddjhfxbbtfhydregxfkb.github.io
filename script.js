@@ -38,8 +38,10 @@ function displayAction(phrase) {
 
 function getRandomNumber() {
   if (randomOptionEnabled) {
-    return Math.floor(Math.random() * 4); // Generates a random number between 0 and 3
+    return Math.floor(Math.random() * 4);
+console.log('Nombre générer'); // Generates a random number between 0 and 3
   } else {
+console.log('Nombre non générer');
     return "";
   }
 }
