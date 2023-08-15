@@ -5,6 +5,39 @@ body {
   background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
 }
 
+/* Appliquer les styles responsifs pour les appareils mobiles */
+@media (max-width: 414px) {
+  body {
+    font-size: 14px; /* Ajuster la taille de la police */
+  }
+
+  /* Ajuster la taille des boutons */
+  .btn-hover {
+    width: 80%; /* Ajuster la largeur du bouton */
+    height: 40px; /* Ajuster la hauteur du bouton */
+    font-size: 14px; /* Ajuster la taille de la police du bouton */
+    margin: 10px auto; /* Centrer le bouton */
+  }
+
+  /* Ajuster la taille des zones de texte */
+  input[type="text"] {
+    width: 80%; /* Ajuster la largeur du champ de texte */
+    font-size: 14px; /* Ajuster la taille de la police du champ de texte */
+  }
+
+  /* Ajuster la taille des éléments du jeu */
+  #player-names,
+  #game-frame {
+    margin-top: 50px; /* Ajuster la marge supérieure */
+  }
+  
+  /* Ajuster la taille des boutons toggle */
+  .toggle-button-cover {
+    width: 100%; /* Ajuster la largeur du bouton toggle */
+    margin: 10px auto; /* Centrer le bouton toggle */
+  }
+}
+
 
 #player-names {
   text-align: center;
