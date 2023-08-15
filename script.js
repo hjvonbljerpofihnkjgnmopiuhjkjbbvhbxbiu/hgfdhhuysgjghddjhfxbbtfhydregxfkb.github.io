@@ -27,6 +27,17 @@ function getRandomPhrase() {
   return phrases[randomIndex];
 }
 
+function getRandomAction() {
+  var phrases = [
+    "NNO",
+    "YREs",
+    "hgfk"
+    // Add more phrases here
+  ];
+  var randomIndex = Math.floor(Math.random() * phrases.length);
+  return phrases[randomIndex];
+}
+
 function displayQuestion(phrase) {
   document.getElementById("questionText").textContent = "Question: " + phrase;
   document.getElementById("actionText").textContent = "";
@@ -54,7 +65,7 @@ function poseQuestion() {
 }
 
 function requestAction() {
-  var phrase = getRandomPhrase();
+  var phrase = getRandomAction();
   displayAction(phrase);
   clearRandomNumber();
 }
@@ -71,6 +82,8 @@ function clearRandomNumber() {
 
 function skipProposition() {
   var currentPlayerName = currentPlayer === 1 ? player1Name : player2Name;
+  document.getElementById("actionText").textContent = "";
+document.getElementById("questionText").textContent = "";
   if (randomOptionEnabled) {
     displayRandomNumber(currentPlayerName);
   }
