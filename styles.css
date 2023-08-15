@@ -2,8 +2,9 @@
 
 body {
   font-family: 'Kavoon', cursive;
-  background: linear-gradient(#030c20, #121b39, #2d4065);
-}
+ background: linear-gradient(160deg, #030c20, #121b39, #2d4065);}
+
+
 
 /* Appliquer les styles responsifs pour les appareils mobiles */
 @media (max-width: 414px) {
