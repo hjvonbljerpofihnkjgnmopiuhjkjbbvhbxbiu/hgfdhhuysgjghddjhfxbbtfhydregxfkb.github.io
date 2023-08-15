@@ -14,7 +14,7 @@ function startGame() {
   document.getElementById("player-names").style.display = "none";
   document.getElementById("game-frame").style.display = "block";
   hideButton();
-  document.getElementById("player-turn").textContent = "Turn: " + player1Name;
+  document.getElementById("player-turn").textContent = "C'est à: " + player1Name;
 }
 // Affiche les deux boutons Pass et skip
 function showButton() {
@@ -172,7 +172,7 @@ function requestAction() {
 function displayRandomNumber(playerName) {
   if (randomOptionEnabled) {
     var randomNumber = getRandomNumber();
-    var message = playerName + " doit prendre " + randomNumber;
+    var message = playerName + " doit prendre " + randomNumber + " gorgé(s).";
     document.getElementById("randomNumberMessage").textContent = message;
   }
 }
