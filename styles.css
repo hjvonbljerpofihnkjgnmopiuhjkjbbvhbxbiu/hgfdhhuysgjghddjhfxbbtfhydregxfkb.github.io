@@ -1,5 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Kavoon);
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Kavoon', cursive;
 }
 
 #player-names {
