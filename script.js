@@ -15,6 +15,17 @@ function startGame() {
   document.getElementById("player-turn").textContent = "Turn: " + player1Name;
 }
 
+function getRandomPhrase() {
+  var phrases = [
+    "What is your favorite color?",
+    "Describe your dream vacation.",
+    "If you could have any superpower, what would it be?"
+    // Add more phrases here
+  ];
+  var randomIndex = Math.floor(Math.random() * phrases.length);
+  return phrases[randomIndex];
+}
+
 function getRandomNumber() {
   if (randomOptionEnabled) {
     return Math.floor(Math.random() * 4); // Generates a random number between 0 and 3
