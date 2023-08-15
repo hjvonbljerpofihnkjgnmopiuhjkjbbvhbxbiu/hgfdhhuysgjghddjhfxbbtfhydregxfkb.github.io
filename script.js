@@ -27,11 +27,11 @@ function hideButton() {
 
 // Affiche les deux boutons Question et action
 function showbisButton() {
-  document.getElementById("ActQueButton").style.display = "block";
+  document.getElementById("ActQueButtons").style.display = "block";
 }
 // Enleve les deux boutons question et action
 function hidebisButton() {
-  document.getElementById("ActQueButton").style.display = "none";
+  document.getElementById("ActQueButtons").style.display = "none";
 }
   
 // Question
