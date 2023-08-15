@@ -15,6 +15,10 @@ body {
 buttonn {
   margin: 10px;
 }
+
+.row {
+  display: table-row;
+}
 .toggle-button-cover {
   display: table-cell;
   position: relative;
