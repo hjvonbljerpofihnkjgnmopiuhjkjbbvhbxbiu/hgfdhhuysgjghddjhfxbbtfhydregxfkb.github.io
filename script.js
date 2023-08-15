@@ -98,7 +98,7 @@ function getRandomAction() {
 "Quelle est la chose la plus cochonne que tu aies faite ?",
 "As-tu déjà vu les parties intimes de ton père ?",
 "As-tu déjà fait l'amour en plein air (si oui où?) ?",
-"Es-tu plutôt "peine à jouir" ou trop précoce ?",
+"Es-tu plutôt \"peine à jouir\" ou trop précoce ?",
 "Quel était ton pire baiser ?",
 "Quelle est la position sexuelle la plus acrobatique que tu sais faire ?",
 "Quelle est la chose la plus embarrassante qui t'est arrivée pendant l'acte ?",
