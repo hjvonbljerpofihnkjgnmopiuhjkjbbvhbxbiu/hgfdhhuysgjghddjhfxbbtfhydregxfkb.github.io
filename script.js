@@ -3,7 +3,7 @@ var currentPlayer = 1;
 var randomOptionEnabled = true;
 
 function toggleRandomOption() {
-  randomOptionEnabled = !randomOptionEnabled;
+  randomOptionEnabled = !document.getElementById("randomOption").checked;
   clearRandomNumber();
 }
 //Debut
