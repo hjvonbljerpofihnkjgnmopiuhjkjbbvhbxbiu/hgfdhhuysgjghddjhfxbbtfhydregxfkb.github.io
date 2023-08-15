@@ -18,24 +18,20 @@ function startGame() {
 }
 // Affiche les deux boutons Pass et skip
 function showButton() {
-  document.getElementById("skipButton").style.display = "block";
-  document.getElementById("passButton").style.display = "block";
+  document.getElementById("SkipPassButton").style.display = "block";
 }
 // Enleve les deux boutons Pass et skip
 function hideButton() {
-  document.getElementById("skipButton").style.display = "none";
-document.getElementById("passButton").style.display = "none";
+  document.getElementById("SkipPassButton").style.display = "none";
 }
 
 // Affiche les deux boutons Question et action
 function showbisButton() {
-  document.getElementById("ActButton").style.display = "block";
-  document.getElementById("QueButton").style.display = "block";
+  document.getElementById("ActQueButton").style.display = "block";
 }
 // Enleve les deux boutons question et action
 function hidebisButton() {
-  document.getElementById("ActButton").style.display = "none";
-document.getElementById("QueButton").style.display = "none";
+  document.getElementById("ActQueButton").style.display = "none";
 }
   
 // Question
