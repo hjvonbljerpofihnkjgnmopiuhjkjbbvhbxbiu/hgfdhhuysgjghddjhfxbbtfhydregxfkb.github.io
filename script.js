@@ -1,5 +1,10 @@
 var player1Name, player2Name;
 var currentPlayer = 1;
+var randomOptionEnabled = false;
+
+function toggleRandomOption() {
+  randomOptionEnabled = !randomOptionEnabled;
+}
 
 function startGame() {
   player1Name = document.getElementById("player1").value;
@@ -8,49 +13,6 @@ function startGame() {
   document.getElementById("player-names").style.display = "none";
   document.getElementById("game-frame").style.display = "block";
   document.getElementById("player-turn").textContent = "Turn: " + player1Name;
-}
-
-function getRandomPhrase() {
-  var phrases = [
-    "What is your favorite color?",
-    "Describe your dream vacation.",
-    "If you could have any superpower, what would it be?"
-    // Add more phrases here
-  ];
-  var randomIndex = Math.floor(Math.random() * phrases.length);
-  return phrases[randomIndex];
-}
-
-function getRandomAction() {
-  var phrases = [
-    "NO",
-    "PLS",
-    "Why..."
-    // Add more phrases here
-  ];
-  var randomIndex = Math.floor(Math.random() * phrases.length);
-  return phrases[randomIndex];
-}
-
-function displayQuestion(phrase) {
-  document.getElementById("questionText").textContent = "Question: " + phrase;
-  document.getElementById("actionText").textContent = "";
-}
-
-function displayAction(phrase) {
-  document.getElementById("questionText").textContent = "";
-  document.getElementById("actionText").textContent = "Action: " + phrase;
-}
-
-function clearPhrases() {
-  document.getElementById("questionText").textContent = "";
-  document.getElementById("actionText").textContent = "";
-}
-
-var randomOptionEnabled = false;
-
-function toggleRandomOption() {
-  randomOptionEnabled = !randomOptionEnabled;
 }
 
 function getRandomNumber() {
@@ -76,13 +38,11 @@ function requestAction() {
 function displayRandomNumber(playerName) {
   var randomNumber = getRandomNumber();
   var message = playerName + " doit prendre " + randomNumber;
-  document.getElementById("actionText").textContent = message;
-  document.getElementById("questionText").textContent = message;
+  document.getElementById("randomNumberMessage").textContent = message;
 }
 
 function clearRandomNumber() {
-  document.getElementById("actionText").textContent = "";
-  document.getElementById("questionText").textContent = "";
+  document.getElementById("randomNumberMessage").textContent = "";
 }
 
 function skipProposition() {
@@ -91,4 +51,3 @@ function skipProposition() {
   currentPlayer = currentPlayer === 1 ? 2 : 1;
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
-
