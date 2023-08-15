@@ -94,11 +94,12 @@ function requestAction() {
 }
 // Affichage du nombre de gorgé
 function displayRandomNumber(playerName) {
-  var randomNumber = getRandomNumber();
-  var message = playerName + " doit prendre " + randomNumber;
-  document.getElementById("randomNumberMessage").textContent = message;
+  if (randomOptionEnabled) {
+    var randomNumber = getRandomNumber();
+    var message = playerName + " doit prendre " + randomNumber;
+    document.getElementById("randomNumberMessage").textContent = message;
+  }
 }
-
 // Enleve le nombre de gorgé
 function clearRandomNumber() {
   document.getElementById("randomNumberMessage").textContent = "";
