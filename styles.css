@@ -5,12 +5,13 @@ body {
   font-family: 'Kavoon', cursive;
   margin: 0; /* Supprimer la marge par défaut du body */
   background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
-  min-height: 100vh; /* Hauteur de la page égale à la hauteur de l'écran */
-  display: flex;
+  height: 100vh; /* Hauteur de la page égale à la hauteur de l'écran */
+  /* display: flex; */
   flex-direction: column;
+  justify-content: space-between; /* Espacement entre les éléments verticalement */
+  align-items: center; /* Centrer les éléments horizontalement */
+  padding: 20px; /* Ajouter de l'espace autour de la page */
 }
-
-
 
 
 
@@ -21,10 +22,7 @@ body {
     font-size: 16px;
   }
 
-  #player-names,
-  #game-frame {
-    margin-top: 50px;
-  }
+
 
   /* Ajuster la taille des boutons */
   .btn-hover {
@@ -54,12 +52,46 @@ body {
   }
 }
 
+
 #player-names,
 #game-frame {
-  background-color: rgba(0, 0, 0, 0.7); /* Utiliser une couleur semi-transparente */
+  background-color: transparent; /* Fond transparent */
   text-align: center;
   padding: 20px; /* Ajouter un peu d'espace autour du contenu */
+  width: 100%; /* Occuper toute la largeur de la page */
+  max-width: 600px; /* Limiter la largeur maximale */
+  box-sizing: border-box; /* Inclure les marges et bordures dans la largeur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrer les éléments verticalement */
+  align-items: center; /* Centrer les éléments horizontalement */
+  margin-top: 20px; /* Espacement entre les éléments */
+  font-size: 18px; /* Agrandissement du texte */
+}
+
+#player-names {
+  text-align: center;
+  margin-top: 150px; /* Espacement depuis le haut de la page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#player1,
+#player2 {
+  margin: 50px 0; /* Espacement entre les champs Player */
+  font-size: 18px; /* Agrandissement du texte */
+  display: box;
+}
+
+#game-frame {
   flex: 1; /* Remplir l'espace restant */
+  margin-bottom: 20px; /* Espacement en bas */
+}
+
+.button-cover {
+  background-color: #fff;
+  margin-top: auto; /* Aligner en bas de la page */
 }
 
 
@@ -81,7 +113,7 @@ buttonn {
 .button-cover {
   height: 100px;
   margin: 20px;
-  background-color: #fff;
+  background-color: #fff0;
 }
 
 .button-cover:before {
