@@ -21,6 +21,17 @@ function getRandomPhrase() {
   return phrases[randomIndex];
 }
 
+function getRandomAction() {
+  var phrases = [
+    "NO",
+    "PLS",
+    "Why..."
+    // Add more phrases here
+  ];
+  var randomIndex = Math.floor(Math.random() * phrases.length);
+  return phrases[randomIndex];
+}
+
 function displayQuestion(phrase) {
   document.getElementById("questionText").textContent = "Question: " + phrase;
   document.getElementById("actionText").textContent = "";
@@ -42,7 +53,7 @@ function poseQuestion() {
 }
 
 function requestAction() {
-  var phrase = getRandomPhrase();
+  var phrase = getRandomAction();
   displayAction(phrase);
 }
 
