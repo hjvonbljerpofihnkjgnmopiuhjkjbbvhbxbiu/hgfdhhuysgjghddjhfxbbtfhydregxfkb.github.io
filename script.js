@@ -13,7 +13,7 @@ function startGame() {
 
   document.getElementById("player-names").style.display = "none";
   document.getElementById("game-frame").style.display = "block";
- hideButton();
+  hideButton();
   document.getElementById("player-turn").textContent = "Turn: " + player1Name;
 }
 // Affiche les deux boutons Pass et skip
