@@ -124,7 +124,7 @@ function getRandomAction() {
 "Qui est la personne la plus jeune avec qui tu as couché ? Qu'elle âge avez-tu et qu'elle âge avait-elle quand vous avez couché ensemble ?",
 "Raconte une hisoire marrante sur l'un de tes ex.",
 "Oû aimerais tu faire l'amour et tu ne l'as pas encore fais?",
-"As-tu déjà fait des choses que tu regrettes lorsque tu étais bourré ? Si oui, raconte.
+"As-tu déjà fait des choses que tu regrettes lorsque tu étais bourré ? Si oui, raconte.",
 "Quelle est ta plus grosse anecdote de poissard ?",
 "Invente ou non une anecdoteque tu aurais pu vivre ton adversaire doit deviner si elle est vrai ou faux.",
 "Si ta maison brule, quel sont les 4 objets que tu prends ?"
