@@ -91,3 +91,10 @@ document.getElementById("questionText").textContent = "";
   document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
 }
 
+function passProposition() {
+  var currentPlayerName = currentPlayer === 1 ? player1Name : player2Name;
+  document.getElementById("actionText").textContent = "";
+document.getElementById("questionText").textContent = "";
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+  document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
+}
