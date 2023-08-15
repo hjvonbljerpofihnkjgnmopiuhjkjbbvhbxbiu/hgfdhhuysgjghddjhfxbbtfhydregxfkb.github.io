@@ -26,6 +26,16 @@ function getRandomPhrase() {
   return phrases[randomIndex];
 }
 
+function displayQuestion(phrase) {
+  document.getElementById("questionText").textContent = "Question: " + phrase;
+  document.getElementById("actionText").textContent = "";
+}
+
+function displayAction(phrase) {
+  document.getElementById("questionText").textContent = "";
+  document.getElementById("actionText").textContent = "Action: " + phrase;
+}
+
 function getRandomNumber() {
   if (randomOptionEnabled) {
     return Math.floor(Math.random() * 4); // Generates a random number between 0 and 3
