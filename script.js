@@ -12,7 +12,7 @@ function startGame() {
   player2Name = document.getElementById("player2").value;
 
   document.getElementById("player-names").style.display = "none";
-  document.getElementById("container").style.display = "none";
+  document.getElementById("biere").style.display = "none";
   document.getElementById("game-frame").style.display = "block";
   hideButton();
   document.getElementById("player-turn").textContent = "C'est à  " + player1Name;
