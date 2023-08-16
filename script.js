@@ -192,7 +192,7 @@ document.getElementById("questionText").textContent = "";
     displayRandomNumber(currentPlayerName);
   }
   currentPlayer = currentPlayer === 1 ? 2 : 1;
-  document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
+  document.getElementById("player-turn").textContent = "C'est à " + (currentPlayer === 1 ? player1Name : player2Name);
 }
 // Passe la question/action
 function passProposition() {
@@ -202,5 +202,5 @@ document.getElementById("questionText").textContent = "";
    hideButton();
     showbisButton();
   currentPlayer = currentPlayer === 1 ? 2 : 1;
-  document.getElementById("player-turn").textContent = "Turn: " + (currentPlayer === 1 ? player1Name : player2Name);
+  document.getElementById("player-turn").textContent = "C'est à " + (currentPlayer === 1 ? player1Name : player2Name);
 }
