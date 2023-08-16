@@ -229,7 +229,7 @@ body {
 
 #player1,
 #player2 {
-  margin: 50px 0; /* Espacement entre les champs Player */
+  margin: 30px 0; /* Espacement entre les champs Player */
   font-size: 18px; /* Agrandissement du texte */
   display: box;
 }
