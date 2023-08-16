@@ -3,7 +3,7 @@
 /* Appliquer un arrière-plan continu avec les trois couleurs */
 body {
   font-family: 'Kavoon', cursive;
-  overflow: hidden;
+  overflow: hidden visible;
   color: white;
   margin: 0; /* Supprimer la marge par défaut du body */
   background: linear-gradient(160deg, #030c20, #121b39, #2d4065);
